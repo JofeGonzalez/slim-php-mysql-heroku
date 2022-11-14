@@ -1,6 +1,5 @@
 <?php
 // Error Handling
-//JofeGonzalez
 error_reporting(-1);
 ini_set('display_errors', 1);
 
@@ -14,7 +13,7 @@ use Slim\Routing\RouteContext;
 require __DIR__ . '/../vendor/autoload.php';
 
 require_once './db/AccesoDatos.php';
-require_once './middlewares/Logger.php';
+// require_once './middlewares/Logger.php';
 
 require_once './controllers/UsuarioController.php';
 
@@ -24,7 +23,6 @@ $dotenv->safeLoad();
 
 // Instantiate App
 $app = AppFactory::create();
-$app->setBasePath('/app');
 
 // Add error middleware
 $app->addErrorMiddleware(true, true, true);
